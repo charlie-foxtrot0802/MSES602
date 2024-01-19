@@ -1,38 +1,5 @@
 ## Week 1 Lab Assignment. 
 
-What to Submit
-
-Each week you will submit a document (README.md) in Markdown format to the appropriate branch
-(week1, week2, etc.)  in GitHub.   At the end of this class you will be comfortable with a Git Ops
-workflow, but if you don't have previous experience with this, ask for help. Create a folder for your
-screen shots called "images".  The README.md document should be one layer above the "images"
-folder.
-
-The README.md document should include:
-
-Description of your Step by Step Procedure for Part 2.   
-A.) Include important screen shots (between 3 and 5 ) like some screen shots of the installation,
-    final results of the VM running Virtual Box, a login terminal to the VM, etc.   
-
-B.) Include code commands for Part 2b (e.g. dig) and results in code format (not screen shots).
-
-Answer to the following questions.
-How did you ensure that you downloaded an Ubuntu image that was not corrupt.   a.
-b. What are the different ways you can access your VM via SSH.   What are the advantages of
-each method.
-c. What is the purpose of DNS?
-d. Research the kind of attacks that could use "Discovery Vulnerabilities" (DNS is an example)
-to hack into a victims computer.   Tip:  Search for "Network Chuck" on YouTube and look for
-Man in the Middle Attacks, ARP poisoning, etc.
-e. What were your biggest difficulties with this Lab?
-
-Description of your Step by Step Procedure for Part 2.   
-A.) Include important screen shots (between 3 and 5 ) like some screen shots of the installation,
-final results of the VM running Virtual Box, a login terminal to the VM, etc.
-
-B.) Include code commands for Part 2b (e.g. dig) and results in code format (not screen shots).
-
-
 ## Part 2a: Installing a local virtual machine
 
 Vagrant commands:
@@ -63,19 +30,27 @@ Once that was complete I had to install dig, which was done using the following 
 
 ![Image of dig command being installed](images/digInstalled.PNG)
 
-Using the dig command to find the IP address of regis.edu and programmingkitchen.com:
+Using the dig command to find the IP address of regis.edu: 
 
-    dig regis.edu +short
+    bcutcliff@ubuntu:~$ dig regis.edu +short
+    216.54.215.129
 
-    dig programmingkitchen.com +short
+Using the dig command to find the IP address of programmingkitchen.com:
 
-![The image from command line with the results of dig command.](images/digIpAddress.png)
+    bcutcliff@ubuntu:~$ dig programmingkitchen.com +short
+    172.200.38.66
+
+`dig programmingkitchen.com +short`
+
 
 My FQDN (Fully Qualified Domain Name, didn't know that one!) was www.seriouseats.com, my favorite cooking site. Here is the command line:
 
-    dig seriouseats.com +short
-
-![Serious eats dig image.](images/seriousEatsDig.PNG)
+    bcutcliff@ubuntu:~$ dig seriouseats.com +short
+    151.101.130.137
+    151.101.194.137
+    151.101.2.137
+    151.101.66.137
+    bcutcliff@ubuntu:~$
 
 ## Part 3: Git Hub 
 
