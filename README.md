@@ -33,6 +33,8 @@ final results of the VM running Virtual Box, a login terminal to the VM, etc.
 B.) Include code commands for Part 2b (e.g. dig) and results in code format (not screen shots).
 
 
+## Part 2a: Installing a local virtual machine
+
 Vagrant commands:
 
 **This creates a vagrant file in directory I created.**
@@ -47,6 +49,8 @@ Vagrant commands:
 
 ![alt text](images/vagrant_gitBash.PNG)
 
+## Part 2b: Linux Operations exploring DNS and Dig.
+
 I had to use the username and login as vagrant then create a username and password for myself, and then add my user to the sudoers group.  After that I installed the update using:
 
     sudo apt-get update
@@ -57,9 +61,23 @@ Once that was complete I had to install dig, which was done using the following 
 
     sudo apt-get install dnsutils
 
+![Image of dig command being installed](images/digInstalled.PNG)
 
+Using the dig command to find the IP address of regis.edu and programmingkitchen.com:
 
-**Part 3: Git Hub**
+    dig regis.edu +short
+
+    dig programmingkitchen.com +short
+
+![The image from command line with the results of dig command.](images/digIpAddress.png)
+
+My FQDN (Fully Qualified Domain Name, didn't know that one!) was www.seriouseats.com, my favorite cooking site. Here is the command line:
+
+    dig seriouseats.com +short
+
+![Serious eats dig image.](images/seriousEatsDig.PNG)
+
+## Part 3: Git Hub 
 
 I first created a new project on my GitHub titled "MSES602" as instructed.  From there I also logged into my GitHub on MS Visual studio code.  With logging into and linking my GitHub with my VS Code I was able to see all my projects there.  Traditionally I have done the following:
 
