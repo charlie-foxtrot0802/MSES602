@@ -1,3 +1,5 @@
+## Week 1 Lab Assignment. 
+
 What to Submit
 
 Each week you will submit a document (README.md) in Markdown format to the appropriate branch
@@ -33,35 +35,48 @@ B.) Include code commands for Part 2b (e.g. dig) and results in code format (not
 
 Vagrant commands:
 
-# This creates a vagrant file in directory I created.
-vagrant init alvistack/ubuntu-20.04
+**This creates a vagrant file in directory I created.**
 
-# This downloaded and launched my VM using virtualbox.
-vagrant up
+    vagrant init alvistack/ubuntu-20.04
 
-# Checksum automatically performed by vagrant for Ubuntu image.
+**This downloaded and launched my VM using virtualbox.**
 
-Part 3: Git Hub
+    vagrant up
+
+**Checksum automatically performed by vagrant for Ubuntu image.**
+
+
+**Part 3: Git Hub**
 
 I first created a new project on my GitHub titled "MSES602" as instructed.  From there I also logged into my GitHub on MS Visual studio code.  With logging into and linking my GitHub with my VS Code I was able to see all my projects there.  Traditionally I have done the following:
 
-Git Clone via SSH keys:
+**Git Clone via SSH keys:**
 
 1). Generate keys on my Linux OS/VM and then I would then include that key in my GitHub account.
+
 2). I would make a project structure on my Linux OS and then when I wanted to clone my repository I would perform the following command:
+    
     git clone <SSH link>
 
-Git Clone via HTTP:
+**Git Clone via HTTP:**
 
-1). This can also be performed by command line:
+This can also be performed by command line:
+    
     git clone <HTTP link>
-2). Use login and password to perform git clone.
 
-With the clone being automated for GitHub integration into VS Studio Code I was mostly set.  I navigated to my project/repository for this course.  I created this README and then pushed to the GitHub repository. This is the command:
+2) Use login and password to perform git clone.
 
-git push --set-upstream origin week1
+3) With the clone being automated for GitHub integration into VS Studio Code I was mostly set.  I navigated to my project/repository for this course.  I created this README and then pushed to the GitHub repository. This is the command:
 
-Once my local git instance and GitHub were in the same state I created a branch called "week1", and this is the command I used:
+        git push --set-upstream origin week1
 
-git checkout -b week1
+4) Once my local git instance and GitHub were in the same state I created a branch called "week1", and this is the command I used:
+
+        git checkout -b week1
+
+5) Checking status of local git repository to observe any changes:
+        
+        git status -v ( or -vv or no option)
+
+
 
