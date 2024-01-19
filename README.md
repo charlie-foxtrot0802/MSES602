@@ -40,3 +40,28 @@ vagrant init alvistack/ubuntu-20.04
 vagrant up
 
 # Checksum automatically performed by vagrant for Ubuntu image.
+
+Part 3: Git Hub
+
+I first created a new project on my GitHub titled "MSES602" as instructed.  From there I also logged into my GitHub on MS Visual studio code.  With logging into and linking my GitHub with my VS Code I was able to see all my projects there.  Traditionally I have done the following:
+
+Git Clone via SSH keys:
+
+1). Generate keys on my Linux OS/VM and then I would then include that key in my GitHub account.
+2). I would make a project structure on my Linux OS and then when I wanted to clone my repository I would perform the following command:
+    git clone <SSH link>
+
+Git Clone via HTTP:
+
+1). This can also be performed by command line:
+    git clone <HTTP link>
+2). Use login and password to perform git clone.
+
+With the clone being automated for GitHub integration into VS Studio Code I was mostly set.  I navigated to my project/repository for this course.  I created this README and then pushed to the GitHub repository. This is the command:
+
+git push --set-upstream origin week1
+
+Once my local git instance and GitHub were in the same state I created a branch called "week1", and this is the command I used:
+
+git checkout -b week1
+
