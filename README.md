@@ -43,7 +43,20 @@ Vagrant commands:
 
     vagrant up
 
-**Checksum automatically performed by vagrant for Ubuntu image.**
+**Image below is of my git-bash using vagrant to bring up my ubuntu in virtualBox**
+
+![alt text](images/vagrant_gitBash.PNG)
+
+I had to use the username and login as vagrant then create a username and password for myself, and then add my user to the sudoers group.  After that I installed the update using:
+
+    sudo apt-get update
+
+![This is the picture of the completion of the update](images/ubuntuGetUpdate.PNG)
+
+Once that was complete I had to install dig, which was done using the following command:
+
+    sudo apt-get install dnsutils
+
 
 
 **Part 3: Git Hub**
