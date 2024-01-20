@@ -52,6 +52,227 @@ My FQDN (Fully Qualified Domain Name, didn't know that one!) was www.seriouseats
     151.101.66.137
     bcutcliff@ubuntu:~$
 
+**For regis.edu:**
+
+The regis.edu A DNS record:
+
+    bcutcliff@ubuntu:~$ dig regis.edu A
+
+    ; <<>> DiG 9.16.1-Ubuntu <<>> regis.edu A
+    ;; global options: +cmd
+    ;; Got answer:
+    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 7373
+    ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+    ;; OPT PSEUDOSECTION:
+    ; EDNS: version: 0, flags:; udp: 65494
+    ;; QUESTION SECTION:
+    ;regis.edu.                     IN      A
+
+    ;; ANSWER SECTION:
+    regis.edu.              300     IN      A       216.54.215.129
+
+    ;; Query time: 16 msec
+    ;; SERVER: 127.0.0.53#53(127.0.0.53)
+    ;; WHEN: Sat Jan 20 20:45:40 UTC 2024
+    ;; MSG SIZE  rcvd: 54
+
+The regis.edu MX DNS Record:
+
+        bcutcliff@ubuntu:~$ dig regis.edu MX
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> regis.edu MX
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45984
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;regis.edu.                     IN      MX
+
+        ;; ANSWER SECTION:
+        regis.edu.              3600    IN      MX      10 d174024a.ess.barracudanetworks.com.
+        regis.edu.              3600    IN      MX      20 d174024b.ess.barracudanetworks.com.
+
+        ;; Query time: 24 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sat Jan 20 20:46:23 UTC 2024
+        ;; MSG SIZE  rcvd: 113
+
+The regis.edu CNAME DNS Record:
+
+        bcutcliff@ubuntu:~$ dig regis.edu CNAME
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> regis.edu CNAME
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 51204
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;regis.edu.                     IN      CNAME
+
+        ;; Query time: 16 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sat Jan 20 20:47:26 UTC 2024
+        ;; MSG SIZE  rcvd: 38
+
+
+**The programmingkitchen.com DNS records:**
+
+The programmingkitchen.com A DNS record:
+
+        bcutcliff@ubuntu:~$ dig programmingkitchen.com A
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> programmingkitchen.com A
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 23642
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;programmingkitchen.com.                IN      A
+
+        ;; ANSWER SECTION:
+        programmingkitchen.com. 600     IN      A       172.200.38.66
+
+        ;; Query time: 108 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sat Jan 20 20:48:24 UTC 2024
+        ;; MSG SIZE  rcvd: 67
+
+The programmingkitchen.com MX DNS record:
+
+        bcutcliff@ubuntu:~$ dig programmingkitchen.com MX
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> programmingkitchen.com MX
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42490
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;programmingkitchen.com.                IN      MX
+
+        ;; ANSWER SECTION:
+        programmingkitchen.com. 3600    IN      MX      0 smtp.secureserver.net.
+
+        ;; Query time: 124 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sat Jan 20 20:49:03 UTC 2024
+        ;; MSG SIZE  rcvd: 88
+
+
+The programmingkitchen.com CNAME DNS record:
+
+        bcutcliff@ubuntu:~$ dig programmingkitchen.com CNAME
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> programmingkitchen.com CNAME
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 58403
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;programmingkitchen.com.                IN      CNAME
+
+        ;; Query time: 120 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sat Jan 20 20:51:27 UTC 2024
+        ;; MSG SIZE  rcvd: 51
+
+**The seriouseats.com DNS records:**
+
+The seriouseats.com A DNS record:
+
+        bcutcliff@ubuntu:~$ dig seriouseats.com A
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> seriouseats.com A
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26569
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;seriouseats.com.               IN      A
+
+        ;; ANSWER SECTION:
+        seriouseats.com.        600     IN      A       151.101.2.137
+        seriouseats.com.        600     IN      A       151.101.66.137
+        seriouseats.com.        600     IN      A       151.101.130.137
+        seriouseats.com.        600     IN      A       151.101.194.137
+
+        ;; Query time: 16 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sat Jan 20 20:52:22 UTC 2024
+        ;; MSG SIZE  rcvd: 108
+
+The seriouseats.com MX DNS record:
+
+        bcutcliff@ubuntu:~$ dig seriouseats.com MX
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> seriouseats.com MX
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 12589
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;seriouseats.com.               IN      MX
+
+        ;; ANSWER SECTION:
+        seriouseats.com.        276     IN      MX      20 alt1.aspmx.l.google.com.
+        seriouseats.com.        276     IN      MX      10 aspmx.l.google.com.
+        seriouseats.com.        276     IN      MX      50 aspmx3.googlemail.com.
+        seriouseats.com.        276     IN      MX      40 aspmx2.googlemail.com.
+        seriouseats.com.        276     IN      MX      30 alt2.aspmx.l.google.com.
+
+        ;; Query time: 0 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sat Jan 20 20:53:14 UTC 2024
+        ;; MSG SIZE  rcvd: 174
+
+
+The seriouseats.com CNAME DNS record:
+
+        bcutcliff@ubuntu:~$ dig seriouseats.com CNAME
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> seriouseats.com CNAME
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62012
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;seriouseats.com.               IN      CNAME
+
+        ;; Query time: 36 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sat Jan 20 20:53:50 UTC 2024
+        ;; MSG SIZE  rcvd: 44
+
+**TTL for each portion of DNS Hierarchy:**
+
+TTL for regis.edu:
+
+
+
 ## Part 3: Git Hub 
 
 I first created a new project on my GitHub titled "MSES602" as instructed.  From there I also logged into my GitHub on MS Visual studio code.  With logging into and linking my GitHub with my VS Code I was able to see all my projects there.  Traditionally I have done the following:
