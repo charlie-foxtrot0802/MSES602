@@ -267,11 +267,104 @@ The seriouseats.com CNAME DNS record:
         ;; WHEN: Sat Jan 20 20:53:50 UTC 2024
         ;; MSG SIZE  rcvd: 44
 
-**TTL for each portion of DNS Hierarchy:**
+# TTL for each portion of DNS Hierarchy:
 
-TTL for regis.edu:
+**TTL for regis.edu:**
+
+        bcutcliff@ubuntu:~$ !39
+        dig +nocmd +noall +answer regis.edu A
+        regis.edu.              300     IN      A       216.54.215.129
+        bcutcliff@ubuntu:~$ !40
+        dig +nocmd +noall +answer regis.edu MX
+        regis.edu.              3600    IN      MX      20 d174024b.ess.barracudanetworks.com.
+        regis.edu.              3600    IN      MX      10 d174024a.ess.barracudanetworks.com.
+        bcutcliff@ubuntu:~$ dig +nocmd +noall +answer www.regis.edu CNAME
 
 
+**TTL for www.programmingkitchen.com**
+
+        bcutcliff@ubuntu:~$ dig +nocmd +noall +answer www.programmingkitchen.com A
+        www.programmingkitchen.com. 3600 IN     CNAME   programmingkitchen.com.
+        programmingkitchen.com. 599     IN      A       172.200.38.66
+        bcutcliff@ubuntu:~$ dig +nocmd +noall +answer www.programmingkitchen.com MX
+        www.programmingkitchen.com. 3589 IN     CNAME   programmingkitchen.com.
+        programmingkitchen.com. 3600    IN      MX      0 smtp.secureserver.net.
+        bcutcliff@ubuntu:~$ dig +nocmd +noall +answer www.programmingkitchen.com CNAME
+        www.programmingkitchen.com. 3585 IN     CNAME   programmingkitchen.com.
+        bcutcliff@ubuntu:~$
+
+**TTL for www.seriouseats.com:**
+
+        bcutcliff@ubuntu:~$ dig +nocmd +noall +answer www.seriouseats.com A
+        www.seriouseats.com.    30981   IN      CNAME   k.sni.global.fastly.net.
+        k.sni.global.fastly.net. 12     IN      A       151.101.70.137
+        bcutcliff@ubuntu:~$ dig +nocmd +noall +answer www.seriouseats.com MX
+        www.seriouseats.com.    7197    IN      CNAME   k.sni.global.fastly.net.
+        bcutcliff@ubuntu:~$ dig +nocmd +noall +answer www.seriouseats.com CNAME
+        www.seriouseats.com.    7194    IN      CNAME   k.sni.global.fastly.net.
+        bcutcliff@ubuntu:~$
+
+**Reverse DNS lookup:**
+
+Did reverse lookup for the IPv4 addresses provided (8.8.8.8 and 8.8.4.4), which appear to be google's public addresses:
+
+        bcutcliff@ubuntu:~$ dig -x 8.8.8.8
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.8.8
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 12398
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;8.8.8.8.in-addr.arpa.          IN      PTR
+
+        ;; ANSWER SECTION:
+        8.8.8.8.in-addr.arpa.   74111   IN      PTR     dns.google.
+
+        ;; Query time: 12 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sun Jan 21 16:50:04 UTC 2024
+        ;; MSG SIZE  rcvd: 73
+
+        bcutcliff@ubuntu:~$ dig -x 8.8.4.4
+
+        ; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.4.4
+        ;; global options: +cmd
+        ;; Got answer:
+        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8278
+        ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+        ;; OPT PSEUDOSECTION:
+        ; EDNS: version: 0, flags:; udp: 65494
+        ;; QUESTION SECTION:
+        ;4.4.8.8.in-addr.arpa.          IN      PTR
+
+        ;; ANSWER SECTION:
+        4.4.8.8.in-addr.arpa.   71461   IN      PTR     dns.google.
+
+        ;; Query time: 12 msec
+        ;; SERVER: 127.0.0.53#53(127.0.0.53)
+        ;; WHEN: Sun Jan 21 16:50:38 UTC 2024
+        ;; MSG SIZE  rcvd: 73
+
+        bcutcliff@ubuntu:~$ dig -x 8.8.8.8 +short
+        dns.google.
+        bcutcliff@ubuntu:~$ dig -x 8.8.4.4 +short
+        dns.google.
+
+## Questions:
+
+**How did you ensure that you downloaded an Ubuntu image that was not corrupt?**
+
+Answer: You perform a checksum of the ubuntu image from their curated image compared to your downloaded image.
+
+**What are the different ways you can access your VM via SSH. What are the advantages of
+each method?**
+
+Answer: I used my terminal window in git-bash to ssh as my user on my vm, via localhost.  
 
 ## Part 3: Git Hub 
 
