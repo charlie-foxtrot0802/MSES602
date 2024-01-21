@@ -48,7 +48,7 @@ It appears that I got no "answer" to my query when I do a reverse-DNS lookup usi
 
 **What could be done to change this behavior to be more helpful for someone trying to find the domain associated with a particular IP address?**
 
-
+I think that something that could be done is being able to get more information out of a CNAME reverse lookup query, or make the query more human readable to give better context.
 
 **What is the DNS server that you are using on your local PC or environment where you are doing the lab?**
 
