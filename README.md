@@ -355,17 +355,6 @@ Did reverse lookup for the IPv4 addresses provided (8.8.8.8 and 8.8.4.4), which 
         bcutcliff@ubuntu:~$ dig -x 8.8.4.4 +short
         dns.google.
 
-## Questions:
-
-**How did you ensure that you downloaded an Ubuntu image that was not corrupt?**
-
-Answer: You perform a checksum of the ubuntu image from their curated image compared to your downloaded image.
-
-**What are the different ways you can access your VM via SSH. What are the advantages of
-each method?**
-
-Answer: I used my terminal window in git-bash to ssh as my user on my vm, via localhost.  
-
 ## Part 3: Git Hub 
 
 I first created a new project on my GitHub titled "MSES602" as instructed.  From there I also logged into my GitHub on MS Visual studio code.  With logging into and linking my GitHub with my VS Code I was able to see all my projects there.  Traditionally I have done the following:
@@ -398,5 +387,29 @@ This can also be performed by command line:
         
         git status -v ( or -vv or no option)
 
+## Questions:
 
+**How did you ensure that you downloaded an Ubuntu image that was not corrupt?**
 
+Answer: You perform a checksum of the ubuntu image from their curated image compared to your downloaded image.
+
+**What are the different ways you can access your VM via SSH. What are the advantages of
+each method?**
+
+Answer: I used my terminal window in git-bash to ssh as my user on my vm, via localhost.  You can either use a login and password or an SSH key that you provide.  Linking 
+
+**What is the purpose of DNS?**
+
+Answer:  The purpose of DNS is to turn human readable words and web addresses we understand (www.seriouseats.com) into an IP address that works as that sites identification to speak to other device IP's on the internet.
+
+**What are some types of attacks used for Discovery Vulnerabilities?**
+
+Answer: According to the video at this link (https://www.youtube.com/watch?v=-rSqbgI7oZM&ab_channel=NetworkChuck) I man-in-the-middle attack uses ARP (Address Resoultion Protocol) poisoning to get access to the network traffic of devices on a network by using the ARP.  You can do this by being on another device with access ot the network that reassigns the IP addresses from particular devices to the MAC address of the device you are using to hack into the network.  This means that the network traffic that you would normally be blind to due to modern routers being switches, and not hubs, keep the information sent between devices secure.  The way that this is used successfully is to also allow the traffic to route normally to the router and devices you have reassigned MAC addresses for, hence the name man-in-the-middle.  You then need a program (wireshark is the video's example) that can monitor all the network traffic for you.
+
+Some other ways I discovered from this kaspersky.com (https://usa.kaspersky.com/resource-center/definitions/dns) Is DNS spoofing, which is when an attack which redirects traffic from legitimate to compromised websites.  DNS cache poisoning is also mentioned which implants a fake IP address in your local cache so that anytime you try to visit the "legitimate" website it routes you to the fraudulent one.  These appear to be mostly initiated by phishing/spam e-mails using fear to get people to click on malicious links.
+
+Some tips to defend against these are use of Virtual Private Networks (VPN's), regular malware scans, and good information security practices regarding trusted links, certificates, and recognition of phishing attempts.
+
+**What were your biggest difficulties with this Lab?**
+
+I haven't used dig at all before this, so learning all the commands to complete section 2b was somewhat challenging.  I also used vagrant to stand up a VM for the first time, which ended up being very easy.  It did make finding how to checksum the Ubuntu image.  Also some of the commands I used set me back a bit.  I used **vagrant destroy** at first, which led me to believe that is how you brought down the VM in a healthy state.  This made me have to add my user back into the system and then sudoers group again.  Luckily alot of utilities and updates I made stuck.  I found that **vagrant halt/suspend** is a much better option to bring down the VM in a healthy state and made it much easier.
