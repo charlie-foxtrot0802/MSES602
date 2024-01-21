@@ -16,6 +16,14 @@ Vagrant commands:
 
 ![alt text](images/vagrant_gitBash.PNG)
 
+**Checksum of .iso**
+
+I was actually unable to figure out how to properly do this since I used Vagrant to install my Ubuntu 20.04 LTS VM on VirtualBox.  I did, however, find instructions on how to perform a checksum on the Ubuntu image here:
+
+https://ubuntu.com/tutorials/how-to-verify-ubuntu#1-overview
+
+This basically has you download the SHA256SUMS(and .gpg) files that contain the hashes to confirm you have an uncorrupted download of Ubuntu.  I was unable to perform this manually, but I believe when I did a `vagrant init alvistack/ubuntu-20.04` a checksum was automatically performed but I do not have evidence of this.
+
 ## Part 2b: Linux Operations exploring DNS and Dig.
 
 I had to use the username and login as vagrant then create a username and password for myself, and then add my user to the sudoers group.  After that I installed the update using:
