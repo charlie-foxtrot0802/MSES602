@@ -9,3 +9,13 @@ different kind of data.
 What to submit (in addition to work on the LMS)
 • Submit the Written Assignment as a README.me file using Markdown in your GitHub Repository 
 in a branch named "week2".
+
+# What are the Pros and Cons of The Three Cloud Service Models?
+
+| Cloud Model                        |             Pros             |               Cons           | 
+| :--------------------------------: | :--------------------------: | :--------------------------: |
+| Infrastructure as a Service (IaaS) | Most similar to existing IT resources. | 
+
+
+
+## What are the Three 
