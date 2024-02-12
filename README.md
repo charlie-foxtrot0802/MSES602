@@ -2,7 +2,7 @@
 
 # AWS Orchestration Services.
    
-    ```Amazon's kubernetes orchestration service is known as Amazon Elastic Kubernetes Service (EKS).  Like Azure and Google it offers kubernetes in the cloud, but unlike Google it offers hybrid and on-premises orchestration of pods and clusters.  It is also integrated with AWS services that are also on the cloud.  It offers a pay-as-you-go payment system.  Amazon EKS also provides scalability of kubernetes containers as a service.  You can manage your cluster through AWS web consoles.  These seem to be add-ons, however, which differentiates it from the two-tiered system that Google offers.```
+    Amazon's kubernetes orchestration service is known as Amazon Elastic Kubernetes Service (EKS).  Like Azure and Google it offers kubernetes in the cloud, but unlike Google it offers hybrid and on-premises orchestration of pods and clusters.  It is also integrated with AWS services that are also on the cloud.  It offers a pay-as-you-go payment system.  Amazon EKS also provides scalability of kubernetes containers as a service.  You can manage your cluster through AWS web consoles.  These seem to be add-ons, however, which differentiates it from the two-tiered system that Google offers.
 
 # Azure (Microsoft) Orchestration Services.
     
